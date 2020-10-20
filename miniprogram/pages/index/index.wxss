@@ -1,0 +1,39 @@
+/**index.wxss**/
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.select-wrap {
+  width: 300rpx;
+}
+.selected {
+  margin-top: 50%;
+}
+.title {
+  font-size: 50rpx;
+  text-align: center;
+}
+.tip {
+  font-size: 32rpx;
+  margin-top: 10rpx;
+  color: #888;
+}
+.info_wrap {
+  margin-top: 14rpx;
+}
+.info_wrap .input_row {
+  margin-top: 14rpx;
+  display: flex;
+  align-items: center;
+}
+.info_wrap .input_row label {
+  font-size: 36rpx;
+  width: 160rpx;
+  border-bottom: center;
+}
+.info_wrap .input_row input {
+  font-size: 36rpx;
+  flex: 1;
+}

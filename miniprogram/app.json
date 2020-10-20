@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/announce/index",
+    "pages/announcedetail/index",
+    "pages/dinehistory/index",
+    "pages/goodshistory/index",
+    "pages/goodsshenbao/index",
+    "pages/goodssubmit/index",
+    "pages/healthysubmit/index",
+    "pages/historysubmit/index",
+    "pages/personalInfo/index",
+    "pages/personalcenter/index",
+    "pages/tomorrowdine/index"
+  ],
+  "window": {
+    "backgroundColor": "#1aad19",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1aad19",
+    "navigationBarTitleText": "应急后勤管理",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "明日用餐" ,
+        "iconPath": "images/dine.png",
+        "selectedIconPath": "images/dine1.png"
+      },
+      {
+        "pagePath": "pages/healthysubmit/index",
+        "text": "健康上报",
+        "iconPath": "images/healthy.png",
+        "selectedIconPath": "images/healthy1.png"
+      },
+      {
+        "pagePath": "pages/personalcenter/index",
+        "text": "个人中心",
+        "iconPath": "images/personalcenter.png",
+        "selectedIconPath": "images/personalcenter1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

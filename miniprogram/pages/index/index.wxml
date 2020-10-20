@@ -1,0 +1,52 @@
+<view class="container">
+<view class="title">第二日用餐统计</view>
+<view class="tip">各位同事，请在当晚七点前提出第二日的用餐需求，建议大家每天只填写一次，若填写有误，可再填写一次，我们以您最后一次提交的为准！</view>
+<view class="info_wrap">
+<form class="form" bindsubmit="submit">
+<view class="input_row">
+  <label>编号：</label>
+  <input name="No" type="text" value="{{record.No}}" placeholder="请输入您的编号"></input>
+</view>
+<view class="input_row">
+  <label>姓名：</label>
+  <input name="Name" type="text" value="{{record.Name}}" placeholder="请输入您的姓名"></input>
+</view>
+<view class="radio_wrap">
+  <label>住所：</label>
+  <radio-group class="radio_group" name="Address">
+    <radio class="radio" value="扬子江" checked="{{record.Address=='扬子江'}}">扬子江</radio>
+    <radio class="radio" value="7天连锁" checked="{{record.Address=='7天连锁'}}">7天连锁</radio>
+  </radio-group>
+</view>
+<view class="chexbox_wrap">
+  <label>第二日用餐：</label>
+  <checkbox-group class="checkbox-group" name="MealInfo">
+    <checkbox class="checkbox" checked="{{record.Breakfast=='是'}}">早餐</checkbox>
+    <checkbox class="checkbox" checked="{{record.Lunch=='是'}}">中餐</checkbox>
+    <checkbox class="checkbox" checked="{{record.Dinner=='是'}}">晚餐</checkbox>
+  </checkbox-group>
+</view>
+<view class="select_wrap">
+  <label>用餐类别：</label>
+  <view class="select-wrap">
+    <select id="select" options="{{options}}" key="city_id" text="city_name" bind:change="change"></select>
+  </view>
+</view>
+<view class="textarea_wrap">
+  <label>若不填写，请说明不就餐原因</label>
+  <textarea name="Remark" value="{{record.Remark}}" placeholder="请填写原因"></textarea>
+</view>
+ <view class="btn_wrap">
+        <!-- <button form-type="submit" disabled="{{!flag}}" style="width:100%;">提交</button> -->        
+        <view wx:if="{{submitFlag}}"> 
+          <button form-type="submit" disabled="{{!flag || btnDisabled}}"  hover-class="button-hover" style="width:100%;}">确认修改</button> 
+        </view>
+        <view wx:else> 
+          <button form-type="submit" disabled="{{!flag || btnDisabled}}" hover-class="button-hover" style="width:100%;">提交</button> </view>
+      </view>
+      <view class="stat_errinfo" hidden="{{flag}}">
+        填写信息时间已结束
+      </view>
+</form>
+</view>
+</view>
